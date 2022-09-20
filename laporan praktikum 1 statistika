@@ -1,0 +1,19 @@
+data_apip=read.delim(pipe("pbpaste"))
+
+View(data_apip)
+
+mean(data_apip$Tinggi.badan)
+
+str(data_apip)
+
+data_apipp.csv=read.csv("/Users/olan/Documents/Semester 3/Prak Statistika/data_apipp.csv",header = TRUE,sep = ",")
+data_apipp.csv
+
+View(data_apipp.csv)
+
+install.packages("xlsx")
+
+library("xlsx")
+
+dtaa_apipp_xlsx=read.xlsx("/Users/olan/Documents/Semester 3/Prak Statistika/data_apipp.xlsx",header = TRUE,sep = ",")
+data_apipp.xlsx
