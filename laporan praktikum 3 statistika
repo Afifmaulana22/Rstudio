@@ -1,0 +1,24 @@
+data_apip=read.csv("/Users/olan/Documents/Semester 3/Prak Statistika/dataa_apipp.csv")
+View(data_apip)
+apip <- data_apip[data_apip$Tinggi.Badan>160,]
+View(apip)
+apip$Tinggi.Badan <- ifelse(apip$Tinggi.Badan>160, c("Tinggi"), c("Pendek"))
+View(apip)
+apip$jurusan <- "Infor20"
+View(apip)
+apip$fakultas <- NULL
+View(apip)
+data_apip.kolom1dan2 <- data_apip[,1:2]
+View(data_apip.kolom1dan2)
+data_apip.kolom3dan4 <- data_apip[,3:4]
+View(data_apip.kolom3dan4)
+data_apip.kolom1sd4<-cbind(data_apip.kolom1dan2, data_apip.kolom3dan4)
+View(data_apip.kolom1sd4)
+data_apip.baris1sd5 <- data_apip[1:5,]
+View(data_apip.baris1sd5)
+data_apip.baris25sd30 <- data_apip[25:30,]
+View(data_apip.baris25sd30)
+data_apip.gabungan <- rbind(data_apip.baris1sd5, data_apip.baris25sd30)
+View(data_apip.gabungan)
+data_apip.sort<-data_apip[order(data_apip$waktu.perjalanan),]
+View(data_apip.sort)
