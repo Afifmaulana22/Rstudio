@@ -1,0 +1,5 @@
+apip = read.delim(pipe("pbpaste"))
+View(apip)
+str(apip)
+mean(apip$penghasilan)
+t.test(apip$penghasilan, mu=14500)
