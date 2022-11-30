@@ -1,0 +1,4 @@
+dbinom(5, 20, prob = 0.85)
+dbinom (3, 20, prob = 0.15)
+dbinom(8,20, prob = 0.85)
+dbinom(2,20, prob=0.15)
