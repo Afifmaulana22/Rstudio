@@ -1,0 +1,8 @@
+df_apip=PlantGrowth
+View(df_apip)
+
+model <- aov(weight~group, data=df_apip)
+summary(model)
+
+tukey.test<-TukeyHSD(model) 
+tukey.test
