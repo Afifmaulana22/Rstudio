@@ -1,0 +1,15 @@
+df_apip = read.delim(pipe("pbpaste"))
+head(df_apip)
+model_reg=lm(df_apip$y~df_apip$x)
+summary(model_reg)
+
+df_apip=read.delim(pipe("pbpaste"))
+df_apip$brick_dummy <- ifelse(df_apip$Brick =="Yes", 1,0)
+df_apip$N_dummy1 <-  ifelse(df_apip$Neighborhood =="West", 1,0)
+df_apip$N_dummy2 <- ifelse(df_apip$Neighborhood =="North", 1,0)
+model=lm(df_apip$Price~df_apip$SqFt+df_apip$Bedrooms+df_apip$Bathrooms+df_apip$brick_dummy+df_apip$N_dummy1+df_apip$N_dummy2)
+summary(model)
+
+df_apip=read.delim(pipe("pbpaste"))
+by(df_apip$Price, df_apip$Neighborhood, mean)
+by(df_apip$Price, df_apip$Brick, mean)
